@@ -52,7 +52,7 @@
             this.btnEnvio.Location = new System.Drawing.Point(10, 398);
             this.btnEnvio.Name = "btnEnvio";
             this.btnEnvio.Size = new System.Drawing.Size(75, 23);
-            this.btnEnvio.TabIndex = 5;
+            this.btnEnvio.TabIndex = 7;
             this.btnEnvio.Text = "Enviar";
             this.btnEnvio.UseVisualStyleBackColor = true;
             this.btnEnvio.Click += new System.EventHandler(this.btnEnvio_Click);
@@ -94,7 +94,7 @@
             this.richMessage.Location = new System.Drawing.Point(10, 232);
             this.richMessage.Name = "richMessage";
             this.richMessage.Size = new System.Drawing.Size(376, 96);
-            this.richMessage.TabIndex = 4;
+            this.richMessage.TabIndex = 5;
             this.richMessage.Text = "";
             // 
             // lblArquivo
@@ -152,7 +152,7 @@
             this.richTelefones.Location = new System.Drawing.Point(12, 113);
             this.richTelefones.Name = "richTelefones";
             this.richTelefones.Size = new System.Drawing.Size(376, 96);
-            this.richTelefones.TabIndex = 10;
+            this.richTelefones.TabIndex = 4;
             this.richTelefones.Text = "";
             this.richTelefones.TextChanged += new System.EventHandler(this.richTelefones_TextChanged);
             // 
@@ -170,7 +170,7 @@
             this.richStatusEnvio.Location = new System.Drawing.Point(10, 349);
             this.richStatusEnvio.Name = "richStatusEnvio";
             this.richStatusEnvio.Size = new System.Drawing.Size(376, 43);
-            this.richStatusEnvio.TabIndex = 14;
+            this.richStatusEnvio.TabIndex = 6;
             this.richStatusEnvio.Text = "";
             // 
             // lblLicenca
@@ -178,7 +178,7 @@
             this.lblLicenca.AutoSize = true;
             this.lblLicenca.Location = new System.Drawing.Point(91, 402);
             this.lblLicenca.Name = "lblLicenca";
-            this.lblLicenca.Size = new System.Drawing.Size(0, 15);
+            this.lblLicenca.Size = new System.Drawing.Size(47, 15);
             this.lblLicenca.TabIndex = 15;
             this.lblLicenca.Text = "Licença";
             // 

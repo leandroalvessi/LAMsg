@@ -40,7 +40,8 @@ namespace LAMsg
                 }
             }
 
-            DateTime DataValidade = Convert.ToDateTime("09/11/2022 23:59:59");
+            localDateTime = new DateTime(localDateTime.Year, localDateTime.Month, localDateTime.Day);
+            DateTime DataValidade = new DateTime(2022, 11, 09);
             if (DataValidade <= localDateTime)
             {
                 btnEnvio.Enabled = false;
