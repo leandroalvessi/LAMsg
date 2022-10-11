@@ -41,7 +41,7 @@ namespace LAMsg
             }
 
             localDateTime = new DateTime(localDateTime.Year, localDateTime.Month, localDateTime.Day);
-            DateTime DataValidade = new DateTime(2022, 11, 09);
+            DateTime DataValidade = new DateTime(2022, 11, 09); //WS Collection
             if (DataValidade <= localDateTime)
             {
                 btnEnvio.Enabled = false;
@@ -57,17 +57,17 @@ namespace LAMsg
         {
             if (txtIdInstancia.Text == "")
             {
-                MessageBox.Show("ID da instância não esta preenchida.");
+                MessageBox.Show("ID da instância não esta preenchida.", "LAMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (txtToken.Text == "")
             {
-                MessageBox.Show("Token não esta preenchida.");
+                MessageBox.Show("Token não esta preenchida.", "LAMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (richMessage.Text.Trim() == "")
             {
-                MessageBox.Show("Mensagem não esta preenchida.");
+                MessageBox.Show("Mensagem não esta preenchida.", "LAMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -79,7 +79,7 @@ namespace LAMsg
 
                 if (filelines.Length < 1)
                 {
-                    MessageBox.Show("Nenhum linha contendo telefone encanotrada no arquivo.");
+                    MessageBox.Show("Nenhum linha contendo telefone encanotrada no arquivo.", "LAMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
@@ -89,7 +89,7 @@ namespace LAMsg
             }
             else
             {
-                MessageBox.Show("Nenhum campo contendo telefone informado.");
+                MessageBox.Show("Nenhum campo contendo telefone informado.", "LAMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -110,6 +110,8 @@ namespace LAMsg
                 throw;
             }
 
+            richStatusEnvio.Text = "";
+
             foreach (string line in filelines)
             {
                 var url = "https://api.ultramsg.com/" + txtIdInstancia.Text.Trim() + "/messages/chat";
@@ -117,7 +119,7 @@ namespace LAMsg
                 var request = new RestRequest(url, Method.Post);
                 request.AddHeader("content-type", "application/x-www-form-urlencoded");
                 request.AddParameter("token", txtToken.Text.Trim());
-                request.AddParameter("to", "+" + line);
+                request.AddParameter("to", "+" + line.Trim());
                 request.AddParameter("body", richMessage.Text);
 
                 RestResponse response = await client.ExecuteAsync(request);
