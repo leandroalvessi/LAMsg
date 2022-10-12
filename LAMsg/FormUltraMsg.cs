@@ -1,6 +1,4 @@
 using RestSharp;
-using System.Globalization;
-using System.Net.Sockets;
 
 namespace LAMsg
 {
@@ -10,12 +8,12 @@ namespace LAMsg
         {
             InitializeComponent();
 
-            if (System.IO.File.Exists(Environment.CurrentDirectory + "/Campos.Json"))
+            if (System.IO.File.Exists(Environment.CurrentDirectory + "/UltraMsgDB.Json"))
             {
                 try
                 {
                     string strJson = "";
-                    using (StreamReader sr = new StreamReader(Environment.CurrentDirectory + "/Campos.Json"))
+                    using (StreamReader sr = new StreamReader(Environment.CurrentDirectory + "/UltraMsgDB.Json"))
                     {
                         strJson = sr.ReadToEnd();
                     }
@@ -36,17 +34,17 @@ namespace LAMsg
         {
             if (txtIdInstancia.Text == "")
             {
-                MessageBox.Show("ID da instância não esta preenchida.", "LAMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("ID da instância não esta preenchida.", "UltraMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (txtToken.Text == "")
             {
-                MessageBox.Show("Token não esta preenchida.", "LAMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Token não esta preenchida.", "UltraMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else if (richMessage.Text.Trim() == "")
             {
-                MessageBox.Show("Mensagem não esta preenchida.", "LAMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Mensagem não esta preenchida.", "UltraMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -58,7 +56,7 @@ namespace LAMsg
 
                 if (filelines.Length < 1)
                 {
-                    MessageBox.Show("Nenhum linha contendo telefone encanotrada no arquivo.", "LAMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Nenhum linha contendo telefone encanotrada no arquivo.", "UltraMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
@@ -68,20 +66,20 @@ namespace LAMsg
             }
             else
             {
-                MessageBox.Show("Nenhum campo contendo telefone informado.", "LAMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nenhum campo contendo telefone informado.", "UltraMsg", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            UltraMsg campos = new UltraMsg();
-            campos.IdInstancia = txtIdInstancia.Text;
-            campos.Token = txtToken.Text;
-            campos.Mensagem = richMessage.Text;
+            UltraMsg ultmsg = new UltraMsg();
+            ultmsg.IdInstancia = txtIdInstancia.Text;
+            ultmsg.Token = txtToken.Text;
+            ultmsg.Mensagem = richMessage.Text;
 
             try
             {
-                using (StreamWriter sw = new StreamWriter(Environment.CurrentDirectory + "/Campos.Json"))
+                using (StreamWriter sw = new StreamWriter(Environment.CurrentDirectory + "/UltraMsgDB.Json"))
                 {
-                    sw.WriteLine(campos.JsonSerializar(campos));
+                    sw.WriteLine(ultmsg.JsonSerializar(ultmsg));
                 }
             }
             catch (Exception)

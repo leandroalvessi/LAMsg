@@ -92,7 +92,7 @@
             // 
             this.richMessage.Location = new System.Drawing.Point(10, 232);
             this.richMessage.Name = "richMessage";
-            this.richMessage.Size = new System.Drawing.Size(376, 96);
+            this.richMessage.Size = new System.Drawing.Size(378, 96);
             this.richMessage.TabIndex = 5;
             this.richMessage.Text = "";
             // 
@@ -168,7 +168,7 @@
             // 
             this.richStatusEnvio.Location = new System.Drawing.Point(10, 349);
             this.richStatusEnvio.Name = "richStatusEnvio";
-            this.richStatusEnvio.Size = new System.Drawing.Size(376, 43);
+            this.richStatusEnvio.Size = new System.Drawing.Size(378, 43);
             this.richStatusEnvio.TabIndex = 6;
             this.richStatusEnvio.Text = "";
             // 

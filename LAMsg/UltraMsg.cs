@@ -13,9 +13,9 @@ namespace LAMsg
         public string Token { get; set; }
         public string Mensagem { get; set; }
 
-        public string JsonSerializar(UltraMsg campos)
+        public string JsonSerializar(UltraMsg ultmsg)
         {
-            return JsonConvert.SerializeObject(campos);
+            return JsonConvert.SerializeObject(ultmsg);
         }
         public static UltraMsg JsonDesserializar(string Json)
         {

@@ -32,7 +32,7 @@ namespace LAMsg
             if (DataValidade <= localDateTime)
             {
                 btnUltraMsg.Enabled = false;
-                btnCallMeBot.Enabled = false;
+                btnTextMeBot.Enabled = false;
                 lblLicenca.Text = "Sua licença expirou";
             }
             else
@@ -45,6 +45,12 @@ namespace LAMsg
         {
             FormUltraMsg ultmsg = new FormUltraMsg();
             ultmsg.ShowDialog();
+        }
+
+        private void btnTextMeBot_Click(object sender, EventArgs e)
+        {
+            FormTextMeBot txtbot = new FormTextMeBot();
+            txtbot.ShowDialog();
         }
     }
 }

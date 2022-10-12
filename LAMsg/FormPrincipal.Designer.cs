@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.btnUltraMsg = new System.Windows.Forms.Button();
-            this.btnCallMeBot = new System.Windows.Forms.Button();
+            this.btnTextMeBot = new System.Windows.Forms.Button();
             this.lblLicenca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -44,14 +44,15 @@
             this.btnUltraMsg.UseVisualStyleBackColor = true;
             this.btnUltraMsg.Click += new System.EventHandler(this.btnUltraMsg_Click);
             // 
-            // btnCallMeBot
+            // btnTextMeBot
             // 
-            this.btnCallMeBot.Location = new System.Drawing.Point(149, 12);
-            this.btnCallMeBot.Name = "btnCallMeBot";
-            this.btnCallMeBot.Size = new System.Drawing.Size(117, 57);
-            this.btnCallMeBot.TabIndex = 1;
-            this.btnCallMeBot.Text = "CallMeBot";
-            this.btnCallMeBot.UseVisualStyleBackColor = true;
+            this.btnTextMeBot.Location = new System.Drawing.Point(149, 12);
+            this.btnTextMeBot.Name = "btnTextMeBot";
+            this.btnTextMeBot.Size = new System.Drawing.Size(117, 57);
+            this.btnTextMeBot.TabIndex = 1;
+            this.btnTextMeBot.Text = "TextlMeBot";
+            this.btnTextMeBot.UseVisualStyleBackColor = true;
+            this.btnTextMeBot.Click += new System.EventHandler(this.btnTextMeBot_Click);
             // 
             // lblLicenca
             // 
@@ -68,7 +69,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(278, 114);
             this.Controls.Add(this.lblLicenca);
-            this.Controls.Add(this.btnCallMeBot);
+            this.Controls.Add(this.btnTextMeBot);
             this.Controls.Add(this.btnUltraMsg);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrincipal";
@@ -82,7 +83,7 @@
         #endregion
 
         private Button btnUltraMsg;
-        private Button btnCallMeBot;
+        private Button btnTextMeBot;
         private Label lblLicenca;
     }
 }
