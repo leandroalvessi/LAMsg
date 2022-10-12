@@ -4,9 +4,9 @@ using System.Net.Sockets;
 
 namespace LAMsg
 {
-    public partial class FormEnvio : Form
+    public partial class FormUltraMsg : Form
     {
-        public FormEnvio()
+        public FormUltraMsg()
         {
             InitializeComponent();
 
@@ -29,7 +29,7 @@ namespace LAMsg
                         strJson = sr.ReadToEnd();
                     }
 
-                    Campos campos = Campos.JsonDesserializar(strJson);
+                    UltraMsg campos = UltraMsg.JsonDesserializar(strJson);
                     txtIdInstancia.Text = campos.IdInstancia;
                     txtToken.Text = campos.Token;
                     richMessage.Text = campos.Mensagem;
@@ -93,7 +93,7 @@ namespace LAMsg
                 return;
             }
 
-            Campos campos = new Campos();
+            UltraMsg campos = new UltraMsg();
             campos.IdInstancia = txtIdInstancia.Text;
             campos.Token = txtToken.Text;
             campos.Mensagem = richMessage.Text;

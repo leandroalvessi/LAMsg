@@ -1,6 +1,6 @@
 ﻿namespace LAMsg
 {
-    partial class FormEnvio
+    partial class FormUltraMsg
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEnvio));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormUltraMsg));
             this.btnEnvio = new System.Windows.Forms.Button();
             this.txtIdInstancia = new System.Windows.Forms.TextBox();
             this.lblIdInstancia = new System.Windows.Forms.Label();

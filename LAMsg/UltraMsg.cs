@@ -7,19 +7,19 @@ using Newtonsoft.Json;
 
 namespace LAMsg
 {
-    internal class Campos
+    internal class UltraMsg
     {
         public string IdInstancia { get; set; }
         public string Token { get; set; }
         public string Mensagem { get; set; }
 
-        public string JsonSerializar(Campos campos)
+        public string JsonSerializar(UltraMsg campos)
         {
             return JsonConvert.SerializeObject(campos);
         }
-        public static Campos JsonDesserializar(string Json)
+        public static UltraMsg JsonDesserializar(string Json)
         {
-            return JsonConvert.DeserializeObject<Campos>(Json);
+            return JsonConvert.DeserializeObject<UltraMsg>(Json);
         }
     }
 }
