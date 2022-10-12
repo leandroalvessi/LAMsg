@@ -44,7 +44,6 @@
             this.richTelefones = new System.Windows.Forms.RichTextBox();
             this.lblStatusEnvio = new System.Windows.Forms.Label();
             this.richStatusEnvio = new System.Windows.Forms.RichTextBox();
-            this.lblLicenca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnEnvio
@@ -173,21 +172,11 @@
             this.richStatusEnvio.TabIndex = 6;
             this.richStatusEnvio.Text = "";
             // 
-            // lblLicenca
-            // 
-            this.lblLicenca.AutoSize = true;
-            this.lblLicenca.Location = new System.Drawing.Point(91, 402);
-            this.lblLicenca.Name = "lblLicenca";
-            this.lblLicenca.Size = new System.Drawing.Size(47, 15);
-            this.lblLicenca.TabIndex = 15;
-            this.lblLicenca.Text = "Licença";
-            // 
-            // FormEnvio
+            // FormUltraMsg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 430);
-            this.Controls.Add(this.lblLicenca);
             this.Controls.Add(this.richStatusEnvio);
             this.Controls.Add(this.lblStatusEnvio);
             this.Controls.Add(this.lblTelefones);
@@ -203,9 +192,9 @@
             this.Controls.Add(this.txtIdInstancia);
             this.Controls.Add(this.btnEnvio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormEnvio";
+            this.Name = "FormUltraMsg";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LAMsg";
+            this.Text = "UltraMsg";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,6 +216,5 @@
         private RichTextBox richTelefones;
         private Label lblStatusEnvio;
         private RichTextBox richStatusEnvio;
-        private Label lblLicenca;
     }
 }

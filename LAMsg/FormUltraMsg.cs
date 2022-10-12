@@ -10,15 +10,6 @@ namespace LAMsg
         {
             InitializeComponent();
 
-            DateTime localDateTime;
-            var client = new TcpClient("time.nist.gov", 13);
-            using (var streamReader = new StreamReader(client.GetStream()))
-            {
-                var response = streamReader.ReadToEnd();
-                var utcDateTimeString = response.Substring(7, 17);
-                localDateTime = DateTime.ParseExact(utcDateTimeString, "yy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal);
-            }
-
             if (System.IO.File.Exists(Environment.CurrentDirectory + "/Campos.Json"))
             {
                 try
@@ -38,18 +29,6 @@ namespace LAMsg
                 {
                     throw;
                 }
-            }
-
-            localDateTime = new DateTime(localDateTime.Year, localDateTime.Month, localDateTime.Day);
-            DateTime DataValidade = new DateTime(2022, 11, 09); //WS Collection
-            if (DataValidade <= localDateTime)
-            {
-                btnEnvio.Enabled = false;
-                lblLicenca.Text = "Sua licença expirou";
-            }
-            else
-            {
-                lblLicenca.Text = "";
             }
         }
 

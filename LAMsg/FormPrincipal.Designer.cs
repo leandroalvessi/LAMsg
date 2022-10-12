@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUltraMsg = new System.Windows.Forms.Button();
             this.btnCallMeBot = new System.Windows.Forms.Button();
+            this.lblLicenca = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // btnUltraMsg
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 57);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "UltraMsg";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnUltraMsg.Location = new System.Drawing.Point(12, 12);
+            this.btnUltraMsg.Name = "btnUltraMsg";
+            this.btnUltraMsg.Size = new System.Drawing.Size(117, 57);
+            this.btnUltraMsg.TabIndex = 0;
+            this.btnUltraMsg.Text = "UltraMsg";
+            this.btnUltraMsg.UseVisualStyleBackColor = true;
+            this.btnUltraMsg.Click += new System.EventHandler(this.btnUltraMsg_Click);
             // 
             // btnCallMeBot
             // 
@@ -51,24 +53,36 @@
             this.btnCallMeBot.Text = "CallMeBot";
             this.btnCallMeBot.UseVisualStyleBackColor = true;
             // 
+            // lblLicenca
+            // 
+            this.lblLicenca.AutoSize = true;
+            this.lblLicenca.Location = new System.Drawing.Point(12, 81);
+            this.lblLicenca.Name = "lblLicenca";
+            this.lblLicenca.Size = new System.Drawing.Size(47, 15);
+            this.lblLicenca.TabIndex = 16;
+            this.lblLicenca.Text = "Licença";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(278, 123);
+            this.ClientSize = new System.Drawing.Size(278, 114);
+            this.Controls.Add(this.lblLicenca);
             this.Controls.Add(this.btnCallMeBot);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnUltraMsg);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LAMsg";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Button button1;
+        private Button btnUltraMsg;
         private Button btnCallMeBot;
+        private Label lblLicenca;
     }
 }
