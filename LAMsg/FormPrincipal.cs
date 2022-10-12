@@ -28,7 +28,7 @@ namespace LAMsg
             }
 
             localDateTime = new DateTime(localDateTime.Year, localDateTime.Month, localDateTime.Day);
-            DateTime DataValidade = new DateTime(2022, 10, 09); //WS Collection
+            DateTime DataValidade = new DateTime(2022, 11, 09); //WS Collection
             if (DataValidade <= localDateTime)
             {
                 btnUltraMsg.Enabled = false;
