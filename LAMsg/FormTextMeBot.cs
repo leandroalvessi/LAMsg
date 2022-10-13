@@ -114,5 +114,21 @@ namespace LAMsg
                 }
             }
         }
+
+        private void txtArquivo_TextChanged(object sender, EventArgs e)
+        {
+            if (txtArquivo.Text != "")
+            {
+                richTelefones.Clear();
+            }
+        }
+
+        private void richTelefones_TextChanged(object sender, EventArgs e)
+        {
+            if (richTelefones.Text != "")
+            {
+                txtArquivo.Clear();
+            }
+        }
     }
 }

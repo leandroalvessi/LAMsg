@@ -41,6 +41,7 @@
             this.txtApiKey = new System.Windows.Forms.TextBox();
             this.btnEnvio = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.lblTelefones = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // richStatusEnvio
@@ -67,6 +68,7 @@
             this.richTelefones.Size = new System.Drawing.Size(376, 96);
             this.richTelefones.TabIndex = 19;
             this.richTelefones.Text = "";
+            this.richTelefones.TextChanged += new System.EventHandler(this.richTelefones_TextChanged);
             // 
             // lblMessage
             // 
@@ -103,6 +105,7 @@
             this.txtArquivo.Name = "txtArquivo";
             this.txtArquivo.Size = new System.Drawing.Size(295, 23);
             this.txtArquivo.TabIndex = 16;
+            this.txtArquivo.TextChanged += new System.EventHandler(this.txtArquivo_TextChanged);
             // 
             // richMessage
             // 
@@ -142,11 +145,21 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // lblTelefones
+            // 
+            this.lblTelefones.AutoSize = true;
+            this.lblTelefones.Location = new System.Drawing.Point(12, 95);
+            this.lblTelefones.Name = "lblTelefones";
+            this.lblTelefones.Size = new System.Drawing.Size(56, 15);
+            this.lblTelefones.TabIndex = 27;
+            this.lblTelefones.Text = "Telefones";
+            // 
             // FormTextMeBot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 430);
+            this.Controls.Add(this.lblTelefones);
             this.Controls.Add(this.richStatusEnvio);
             this.Controls.Add(this.lblStatusEnvio);
             this.Controls.Add(this.richTelefones);
@@ -181,5 +194,6 @@
         private TextBox txtApiKey;
         private Button btnEnvio;
         private OpenFileDialog openFileDialog1;
+        private Label lblTelefones;
     }
 }
