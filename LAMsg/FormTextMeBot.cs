@@ -97,6 +97,7 @@ namespace LAMsg
                 var url = "http://api.textmebot.com/send.php?recipient=+" + line.Trim() + "&apikey=" + txtApiKey.Text.Trim() + "&text=" + richMessage.Text;
                 var client = new RestClient(url);
                 var request = new RestRequest(url, Method.Post);
+                request.AddHeader("content-type", "application/x-www-form-urlencoded");
 
                 await Task.Delay(5000);
                 RestResponse response = await client.ExecuteAsync(request);
