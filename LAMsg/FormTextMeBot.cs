@@ -94,13 +94,11 @@ namespace LAMsg
 
             foreach (string line in filelines)
             {
-                var url = "https://api.ultramsg.com/" + txtApiKey.Text.Trim() + "/messages/chat";
+                var url = "http://api.textmebot.com/send.php?recipient=+" + line.Trim() + "&apikey=" + txtApiKey.Text.Trim() + "&text=" + richMessage.Text;
                 var client = new RestClient(url);
                 var request = new RestRequest(url, Method.Post);
-                request.AddHeader("content-type", "application/x-www-form-urlencoded");
-                request.AddParameter("to", "+" + line.Trim());
-                request.AddParameter("body", richMessage.Text);
 
+                await Task.Delay(5000);
                 RestResponse response = await client.ExecuteAsync(request);
 
                 if (richStatusEnvio.Lines.Length == 0)
